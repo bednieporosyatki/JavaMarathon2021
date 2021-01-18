@@ -3,7 +3,7 @@ package day0;
 public class Task1 {
     public static void main(String[] args) {
         System.out.println("Hello world");
-        // проверка отправки через git
+        // проверка отправки через git//
 
     }
 }
