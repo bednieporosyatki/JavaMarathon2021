@@ -11,7 +11,7 @@ public class Task4 {
         int count = 1980;
 
         while (count <= 2020) {
-            System.out.println("Олимпиада" + count + "года");
+            System.out.println("Олимпиада " + count + " года");
             count = count + 4;
         }
 

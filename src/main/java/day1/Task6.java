@@ -7,7 +7,7 @@ package day1;
 k = 3
 Вывод в консоль:
 1 x 3 = 3
-2 x 3 = 6 ... 
+2 x 3 = 6 ...
 */
 public class Task6 {
 
