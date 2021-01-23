@@ -18,9 +18,9 @@ Stop - ваш ввод в консоль
 */
 
 import java.util.Scanner;
-
 public class Task1 {
     public static void main(String[] args) {
+//NB     Под моим решением  Есть правильное!
         Scanner scanner = new Scanner(System.in);
         boolean stop = true;   //  задаю булевскую переменную
         while (stop) {         // пока true - выполняй!
@@ -53,10 +53,55 @@ public class Task1 {
                 default:
                     System.out.println("Неизвестная страна");
                     break;
-
             }
         }
-        scanner.close(); //  Не забываем закрывать сканнер!
+        System.out.println("Вышел из вайл!"  );
+
+
+
+ // NB!!  ПРАВИЛЬНОЕ РЕШЕНИЕ   - поставить первым местом условия выхода, а далее спускаться по свитчу
+
+        Scanner scaner = new Scanner(System.in);
+        while (true) {
+            String x = scaner.nextLine();// не понимаю почему эта строчка вне цикла делает бесконечный вывод
+
+            if(x.equals("Stop")) //- сразу после сканера  проверяем  ключевое слово выхода
+                break;            // если оно не введено   проваливаемся дальше
+
+            switch (x) {
+
+                case "Москва":
+                case "Владивосток":
+                case "Ростов":
+                    System.out.println("Россия");
+                    break;
+                case "Рим":
+                case "Милан":
+                case "Тури":
+                    System.out.println("Италия");
+                    break;
+                case "Ливерпуль":
+                case "Манчестер":
+                case "Лондон":
+                    System.out.println("Англия");
+                    break;
+                case "Берлин":
+                case "Мюнхен":
+                case "Кёльн":
+                    System.out.println("Германия");
+                   break;
+
+                default:
+                    System.out.println("Неизвестная страна");
+
+            }
+
+        }
+
+
+
+
+
     }
 }
 
