@@ -18,48 +18,31 @@ import java.util.Random;
 *Пояснение. Первое число - сумма тройки [8742, 1040, 3254].
 Второе число - индекс первого элемента тройки, то есть индекс числа 8742.
  */
+// 4 день  задание 4  не удалось.  - требует уделить время циклам и массивам + задачам на 2 циклы
 public class Task4 {
     public static void main(String[] args) {
 
-        int[] mass =new int[100];
+        int[] mass = new int[100];
         Random random = new Random();
-        for (int i = 0; i <mass.length ; i++) {
-            mass[i]=random.nextInt(1000);
-            Arrays.sort(mass);
+        for (int i = 0; i < mass.length; i++) {
+            mass[i] = random.nextInt(10000);
+        }
+        System.out.println(Arrays.toString(mass));
+//-----------------
+            // -------первый цикл
+        for (int i = 0; i < mass.length - 2; i++) { // в первом цикле проходим до конца не учитывая последние 2
+            int sum = 0;
+          int  maxSum=0;    // вычисление индекса тройки с максимальной суммой 3х значений
+            //--------второй цикл
+            for (int j = 0; j < i + 3; j++) {  //  проходим по тройке
+                sum += mass[j];                // на  вн цикле значение суммы перезаписывает значение sum в верхнем цикле
+            }
+            if (sum>maxSum)
+            maxSum=i;                  // если сумма 3 значений больше существующей - перезаписываем ее
+
         }
 
-        System.out.println(Arrays.toString(mass));
 
     }
 }
-/*
-Random rand = new Random();
 
-        int[] myMass = new int[100];
-
-        int sumChisel = 0, maxSum = 0, indexStroki = 0;
-
-        for (int i = 0; i < myMass.length; i++) {
-            myMass[i] = rand.nextInt(10000);
-            //System.out.print(moiMassiv[i] + "\t");
-        }
-
-        System.out.println();
-
-        for (int k = 0; k < myMass.length - 2; k++) {
-            sumChisel = myMass[k] + myMass[k + 1] + myMass[k + 2];
-            if(sumChisel>maxSum){
-                maxSum = sumChisel;
-                indexStroki = k;
-            }
-            //System.out.print(moiMassiv[k] + " ");
-            //System.out.print(moiMassiv[k + 1] + " ");
-            //System.out.print(moiMassiv[k + 2] + "\t");
-            //System.out.println(sumChisel);
-        }
-        System.out.println("Максимальное значение - " + maxSum);
-        System.out.println("А вот это его индекс - " + indexStroki);
-        System.out.println();
-        System.out.println("Проверено, что считает правильно");
-    }
-* */

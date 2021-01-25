@@ -15,40 +15,37 @@ import java.util.Random;
 3 4 9 6 4	// сумма - 26
 
  */
-public class Task3 {
+public class Task3 {   // Решение Наиля  показывает недостаток упражнений с массивами и вложенными циклами
     public static void main(String[] args) {
-        Random random = new Random();
+// создание массива и наполнение его  рандомными значениями
         int[][] mas = new int[12][8];
 
-        for (int i = 0; i < 12; i++) {
-
-            for (int j = 0; j < 8; j++) {
-                mas[i][j] = random.nextInt(50);  //  Заполняем рандомными цифрами оба массива
+        for (int i = 0; i < mas.length; i++) {
+            for (int j = 0; j < mas[i].length; j++) {
+                Random random = new Random();
+                mas[i][j] = random.nextInt(50);
+                System.out.print(mas[i][j] + "\t "); // выводим массив
             }
-        }
-        //--------------------------------------------------
-        int sum_chisel = 0;
-        int max_sum = 0;
-        int str = 0;
-        int index=0;
-        for (int i = 0; i < 12; i++) {
-
-            for (int j = 0; j < 8; j++) {
-                sum_chisel = sum_chisel + mas[i][j]; // сумме чисел
-                System.out.print(mas[i][j] + " ");
-                str = i;
-            }
-            System.out.print("сумма : " + sum_chisel);
-
-            if (sum_chisel > max_sum) {
-                max_sum = sum_chisel;
-                index=str;
-            }
-            sum_chisel = 0;
             System.out.println();
         }
-        System.out.println();
-        System.out.println("Индекс строки " + index + "," + " Максимальная сумма = " + max_sum);
+//----------------------
+
+        int maxSum = 0;
+        int maxSumIndex = 0;
+
+        for (int i = 0; i < mas.length; i++) {    //  длинна массива
+            int sum = 0;
+            for (int j = 0; j < mas[i].length; j++) {
+                sum += mas[i][j];
+            }
+            if (sum >= maxSum) {  // >= позволяет записать не первое найденнное значение а последнее максимальное
+                maxSum = sum;
+                maxSumIndex = i;
+
+            }
+        }
+        System.out.println("Индекс строки с последней максимальной цифрой " + maxSumIndex);
 
     }
 }
+

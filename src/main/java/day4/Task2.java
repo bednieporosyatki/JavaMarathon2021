@@ -25,40 +25,36 @@ public class Task2 {
 
         System.out.println(Arrays.toString(mass));
         //наибольший элемент массива
-        int min = 0;
-        for (int x_mas : mass) {
-            if (min < x_mas) {
-                min = x_mas;
-                mass[0] = min;
+        int max = 0;
+        for (int x : mass) {
+            if (x > max) {
+                max = x;
+
             }
         }
-        System.out.println("наибольший элемент массива " + mass[0]);
+        System.out.println("наибольший элемент массива " + max);
 
-        int max = 1000;
-        for (int x_mas : mass) {
-            if (max > x_mas) {
-                max = x_mas;
-                mass[0] = max;
+        int min = 1000;
+        for (int x : mass) {
+            if (x < min) {
+                min = x;
+
             }
         }
-        System.out.println("наименьший элемент массива " + mass[0]);
-
+        System.out.println("наименьший элемент массива " + min);
+        // сумма элементов делящихся на 0 и сумму этих элементов
         int nul_counter = 0;
-        for (int x_mas : mass) {
-            if (x_mas % 10 == 0)
-                nul_counter++;
-
-        }
-        System.out.println("количество элементов массива, оканчивающихся на 0: " + nul_counter);
-        int nul_sum = 0;
+        int nulSum = 0;
         for (int x_mas : mass) {
             if (x_mas % 10 == 0) {
-                nul_sum = nul_sum + x_mas;
+                nul_counter++; // увеличиваем счетчик
+                nulSum += x_mas;
             }
 
         }
+        System.out.println("количество элементов массива, оканчивающихся на 0: " + nul_counter + "\nСумма эл/0 :" + nulSum);
 
-        System.out.println("сумму элементов массива, оканчивающихся на 0: " + nul_sum);
+
     }
 }
 
