@@ -1,5 +1,7 @@
 package day6;
 
+import javax.crypto.spec.PSource;
+
 public class Car {
     private int yearProduction;
     private String color;
@@ -29,11 +31,18 @@ public class Car {
         this.model = model;
     }
 
-    public void info(int year) {
+    public void info() {
 
-        int result = year - this.yearProduction;
-        if (result > 0)
-            System.out.println("Этот автомобиль:" + result);
+        System.out.println("Этот автомобиль: " + yearProduction + " года");
+    }
+
+    public int yearDifference(int inputYear) {
+        int result = inputYear - yearProduction;
+        if (result > 0) {
+            return result;
+        }
+        result = yearProduction - inputYear;
+        return result; //
 
     }
 }

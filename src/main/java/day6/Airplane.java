@@ -7,12 +7,12 @@ public class Airplane {
     private double weight;
     private double fuel;
 
-    public Airplane(String manufacturer, int year, double length, double weight, double fuel) {
+    public Airplane(String manufacturer, int year, double length, double weight) {
         this.manufacturer = manufacturer;
         this.year = year;
         this.length = length;
         this.weight = weight;
-        this.fuel = fuel = 0;
+        this.fuel = 0; // по умолчанию 0!
 
     }
 
@@ -45,7 +45,7 @@ public class Airplane {
     }
 
     public void fillUp(int fuel) {
-        this.fuel = fuel;
+        this.fuel += fuel;
 
     }
 

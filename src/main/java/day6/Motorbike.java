@@ -35,10 +35,19 @@ public class Motorbike {
         this.model = model;
     }
 
-    public void info(int year) {
-        int result = year - this.yearProduction;
-        if (result > 0)
-            System.out.println("Этот мотоцикл:" + result);
+    public void info() {
+
+        System.out.println("Этот мотоцикл:" + yearProduction + " года");
+
+    }
+
+    public int yearDifference(int inputYear) {
+        int result = inputYear - yearProduction;
+        if (result > 0) {
+            return result;
+        }
+        result = yearProduction - inputYear;
+        return result; // возвращай его значение
 
     }
 }
