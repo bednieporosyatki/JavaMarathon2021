@@ -2,10 +2,10 @@ package day7;
 
 public class Player {
 
-    static final int MAX_STAMINA = 100; // статическое (для всех об) финальное (не изменяемое)
-    static final int MIN_STAMINA = 0;
-    int stamina;
-    static int countPlayers = 0;
+  private    static final int MAX_STAMINA = 100; // статическое (для всех об) финальное (не изменяемое)
+  private   static final int MIN_STAMINA = 0;
+  public int stamina;
+  private static int countPlayers = 0;
 
     public Player(int stamina) {
         this.stamina = stamina;
@@ -40,11 +40,7 @@ public class Player {
                 System.out.println("Команды неполные. На поле еще есть " + freePlayers + " свободных мест ");
                 break;
             case 2:
-                System.out.println("Команды неполные. На поле еще есть " + freePlayers + " свободных места ");
-                break;
             case 3:
-                System.out.println("Команды неполные. На поле еще есть " + freePlayers + " свободных места ");
-                break;
             case 4:
                 System.out.println("Команды неполные. На поле еще есть " + freePlayers + " свободных места ");
                 break;
