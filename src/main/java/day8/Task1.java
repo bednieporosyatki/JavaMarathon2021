@@ -15,8 +15,8 @@ public class Task1 {
     public static void main(String[] args) {
         long start1 = System.currentTimeMillis(); // начало отсчета времени
         String string = "0 ";
-        int[] mass = new int[20000];   // потомсу что стринг Не изменяемый  и создается каждый раз новыя строка , а ссылка на старую остается
-        for (int i = 1; i < mass.length; i++) {
+          // стринг Не изменяемый  и создается каждый раз новыя строка , а ссылка на старую остается
+        for (int i = 1; i < 20000; i++) {
             string += i + " ";
         }
         System.out.println(string);
@@ -28,7 +28,7 @@ public class Task1 {
         long start = System.currentTimeMillis();
 
         StringBuilder stringBuilder = new StringBuilder();
-        for (int i = 0; i < mass.length; i++) {
+        for (int i = 0; i < 20000; i++) {
             stringBuilder.append(i + " ");               // изменяемый класс - строка 1  просто перезаписывается при конкатинации
         }
         System.out.println(stringBuilder);
