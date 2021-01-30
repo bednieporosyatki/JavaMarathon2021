@@ -14,7 +14,7 @@ public class Student extends Human {
 
     @Override
     public void printInfo() {
-        System.out.println("Этот человек с именем " + super.getName());
+      super.printInfo();
         System.out.println("Этот студент с именем " + this.getName());
 
     }

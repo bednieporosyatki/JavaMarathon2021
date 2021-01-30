@@ -11,9 +11,10 @@ public class Rectangle extends Figure {
 //    }
 
     public Rectangle(double width, double height, String color) {
+        super(color); // родительские поля и методы идут в начале  -Всегда!!!
         this.width = width;
         this.height = height;
-        super.setColor(color);
+
     }
 
     @Override

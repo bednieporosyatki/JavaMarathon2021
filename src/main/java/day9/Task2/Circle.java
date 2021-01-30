@@ -11,12 +11,13 @@ public class Circle extends Figure {
 
 
     public double getRadius() {
-        return radius=3;
+        return radius;
     }
 
     public Circle(double radius, String color) {
+        super(color);
         this.radius = radius;
-        super.setColor(color);
+
     }
 
     public void setRadius(double radius) {

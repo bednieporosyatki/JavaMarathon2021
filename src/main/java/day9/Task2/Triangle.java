@@ -14,10 +14,11 @@ public class Triangle extends Figure {
 
 
     public Triangle(double a, double b, double c, String color) {
+        super(color);
         this.a = a;
         this.b = b;
         this.c = c;
-        super.setColor(color);
+
     }
 
     @Override
