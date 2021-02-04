@@ -3,8 +3,6 @@ package day11.task1;
 public class Warehouse implements Worker {
     private int countPickedOrders;
     private int countDeliveredOrders;
-    private int countPickOrder = 0;     // создаем переменные счетчика
-    private int countDeliveryOrder = 0;
 
     @Override
     public String toString() {
@@ -14,22 +12,16 @@ public class Warehouse implements Worker {
                 '}';
     }
 
-
     public int getCountPickedOrders() {
+
         return countPickedOrders;
     }
 
     public int getCountDeliveredOrders() {
+
         return countDeliveredOrders;
     }
 
-    public void setCountPickedOrders(int countPickedOrders) {
-        this.countPickedOrders = countPickedOrders;
-    }
-
-    public void setCountDeliveredOrders(int countDeliveredOrders) {
-        this.countDeliveredOrders = countDeliveredOrders;
-    }
 
     @Override
     public void doWork() {
@@ -42,11 +34,11 @@ public class Warehouse implements Worker {
     }
 
     public void countPickOrder() {   // Мы создаем  метод увеличивающий счетчик сборок (общий)
-        countPickOrder++;
+        countPickedOrders++;
     }
 
     public void countDeliveryOrder() {   // Мы создаем  метод увеличивающий счетчик доставок (общий)
-        countPickOrder++;
+        countDeliveredOrders++;
     }
 
 

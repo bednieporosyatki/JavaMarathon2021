@@ -5,7 +5,7 @@ public class Picker implements Worker {
     private int salary = 0;
     private boolean isPayed = false;
     private int bonus = 70000;
-    private int countP = 0;
+
 
     public int getSalary() {
         return salary;

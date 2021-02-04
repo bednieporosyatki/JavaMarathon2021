@@ -29,7 +29,8 @@ public class Courier implements Worker {
         salary += 100;
         warehouse.countDeliveryOrder();  // курьер считает  через счетчик в методе класса  и   ничего не выходит 0
         if (warehouse.getCountPickedOrders() >= 10000)
-            isPayed = true;
+           bonus();
+
     }
 
     @Override
